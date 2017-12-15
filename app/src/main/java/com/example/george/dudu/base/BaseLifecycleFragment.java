@@ -4,8 +4,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+
+import com.example.george.dudu.R;
 
 /**
  * Created by Administrator on 2017/12/16.
@@ -33,6 +37,7 @@ public class BaseLifecycleFragment extends FragmentManager.FragmentLifecycleCall
     @Override
     public void onFragmentCreated(FragmentManager fm, Fragment f, Bundle savedInstanceState) {
         super.onFragmentCreated(fm, f, savedInstanceState);
+
     }
 
     @Override
@@ -43,6 +48,12 @@ public class BaseLifecycleFragment extends FragmentManager.FragmentLifecycleCall
     @Override
     public void onFragmentViewCreated(FragmentManager fm, Fragment f, View v, Bundle savedInstanceState) {
         super.onFragmentViewCreated(fm, f, v, savedInstanceState);
+        Toolbar toolbar = v.findViewById(R.id.toolbar);
+        if (toolbar ==null) {
+            return;
+        }
+        ((AppCompatActivity) f.getActivity()).setSupportActionBar(toolbar);
+
     }
 
     @Override
