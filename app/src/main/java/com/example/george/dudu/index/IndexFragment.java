@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -52,7 +54,13 @@ public class IndexFragment extends BaseFragment {
     protected void initActionBar(ActionBar supportActionBar) {
         super.initActionBar(supportActionBar);
         supportActionBar.setTitle("Index");
-//        supportActionBar.sea
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_action_index,menu);
     }
 
     public static IndexFragment newInstance() {

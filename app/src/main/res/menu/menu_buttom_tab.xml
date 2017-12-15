@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_index"
-        android:icon="@drawable/ic_search_black"
+        android:icon="@drawable/btn_navigationbar_feed"
         android:title="首页"/>
     <item
 
         android:id="@+id/menu_discover"
-        android:icon="@drawable/ic_search_black"
+        android:icon="@drawable/btn_navigationbar_explore"
         android:title="发现"/>
     <item
         android:id="@+id/menu_message"
-        android:icon="@drawable/ic_search_black"
+        android:icon="@drawable/btn_navigationbar_notification"
         android:title="交流"/>
     <item
         android:id="@+id/menu_me"
-        android:icon="@drawable/ic_search_black"
+        android:icon="@drawable/btn_navigationbar_profile"
         android:title="我的"/>
 </menu>
