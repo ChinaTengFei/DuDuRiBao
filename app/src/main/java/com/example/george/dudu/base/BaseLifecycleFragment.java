@@ -52,7 +52,11 @@ public class BaseLifecycleFragment extends FragmentManager.FragmentLifecycleCall
         if (toolbar ==null) {
             return;
         }
-        ((AppCompatActivity) f.getActivity()).setSupportActionBar(toolbar);
+
+        AppCompatActivity appCompatActivity =  ((AppCompatActivity) f.getActivity());
+        appCompatActivity.setSupportActionBar(toolbar);
+
+
 
     }
 

@@ -1,23 +1,18 @@
 package com.example.george.dudu.index;
 
-import android.databinding.DataBindingComponent;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.george.dudu.R;
 import com.example.george.dudu.UIUtils;
-import com.example.george.dudu.Utils;
 import com.example.george.dudu.base.BaseFragment;
 import com.example.george.dudu.bean.IndexBean;
 import com.example.george.dudu.databinding.FragmentIndexBinding;
-import com.example.george.dudu.ui.adapter.BaseAdapter;
 import com.example.george.dudu.ui.adapter.IndexAdapter;
-import com.example.george.dudu.utils.AutoClearedValue;
 
 import java.util.ArrayList;
 
@@ -51,6 +46,13 @@ public class IndexFragment extends BaseFragment {
             indexBeans.add(new IndexBean("name:"+i,i));
         }
         ((IndexAdapter) binding.rvIndex.getAdapter()).replace(indexBeans);
+    }
+
+    @Override
+    protected void initActionBar(ActionBar supportActionBar) {
+        super.initActionBar(supportActionBar);
+        supportActionBar.setTitle("Index");
+//        supportActionBar.sea
     }
 
     public static IndexFragment newInstance() {

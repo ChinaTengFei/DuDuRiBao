@@ -3,6 +3,7 @@ package com.example.george.dudu.me;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,4 +35,9 @@ public class MeFragment extends BaseFragment {
         return fragment;
     }
 
+    @Override
+    protected void initActionBar(ActionBar supportActionBar) {
+        super.initActionBar(supportActionBar);
+        supportActionBar.setTitle("Me");
+    }
 }
