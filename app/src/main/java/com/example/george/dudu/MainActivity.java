@@ -7,12 +7,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.componentservice.DiscoverService;
 import com.example.componentservice.IndexService;
+import com.example.componentservice.MeService;
+import com.example.componentservice.MessageService;
 import com.example.george.dudu.base.BaseActivity;
 import com.example.george.dudu.base.BaseFragment;
 import com.example.george.dudu.databinding.ActivityMainBinding;
 import com.example.george.dudu.helper.BottomNavigationViewHelper;
-import com.example.george.dudu.me.MeFragment;
-import com.example.george.dudu.message.MessageFragment;
 import com.examplle.component.componentlib.router.Router;
 
 import java.util.ArrayList;
@@ -28,14 +28,15 @@ public class MainActivity extends BaseActivity {
         Router instance = Router.getInstance();
         IndexService indexService = (IndexService) instance.getService(IndexService.class.getSimpleName());
         DiscoverService discoverService = (DiscoverService) instance.getService(DiscoverService.class.getSimpleName());
-//        MessageService messageService = (MessageService) instance.getService(MessageService.class.getSimpleName());
-//        MeService meService = (MeService) instance.getService(MeService.class.getSimpleName());
+        MessageService messageService = (MessageService) instance.getService(MessageService.class.getSimpleName());
+        MeService meService = (MeService) instance.getService(MeService.class.getSimpleName());
+
+
         baseFragments.add(indexService.getIndexFragment());
         baseFragments.add(discoverService.getDiscoverFragment());
-//        baseFragments.add(messageService.getMessageFragment());
-//        baseFragments.add(meService.getMeFragment());
-        baseFragments.add(MessageFragment.newInstance());
-        baseFragments.add(MeFragment.newInstance());
+        baseFragments.add(messageService.getMessageFragment());
+        baseFragments.add(meService.getMeFragment());
+
         activityMainBinding.vpMain.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {

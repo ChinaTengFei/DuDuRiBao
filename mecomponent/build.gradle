@@ -33,6 +33,6 @@ dependencies {
 }
 
 combuild {
-    applicationName = 'ReaderApplication'
+    applicationName = 'com.examplle.discover.runalone.application.MessageApplications'
     isRegisterCompoAuto = true
 }
