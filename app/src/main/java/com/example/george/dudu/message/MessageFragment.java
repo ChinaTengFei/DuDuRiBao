@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.george.dudu.R;
-import com.example.george.dudu.UIUtils;
 import com.example.george.dudu.base.BaseFragment;
+import com.example.george.dudu.util.UIUtils;
 
 /**
  * Created by George on 2017/12/12.

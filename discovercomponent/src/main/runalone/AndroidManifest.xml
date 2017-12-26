@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.discovercomponent">
+
+    <application
+        android:name="com.example.discover.runalone.application.DiscoverApplication"
+        android:allowBackup="true"
+        android:label="discover"
+        android:supportsRtl="true"
+        android:theme="@style/commonAppTheme"
+        tools:replace="android:label">
+
+        <activity android:name="com.example.discover.runalone.DiscoverTestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
